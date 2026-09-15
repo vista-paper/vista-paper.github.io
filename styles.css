@@ -27,7 +27,7 @@ a, button { color: inherit; }
 .nav { height: 72px; display: flex; align-items: center; justify-content: space-between; gap: 30px; }
 .brand { display: inline-flex; align-items: center; gap: 10px; font-family: "Manrope", sans-serif; font-weight: 800; letter-spacing: .06em; text-decoration: none; }
 .brand-mark, .footer-mark { display: grid; place-items: center; width: 36px; height: 36px; border: 1px solid rgba(87,151,212,.28); border-radius: 11px; color: #fff; background: #07182d; font-family: "Manrope",sans-serif; font-weight: 800; box-shadow: 0 7px 18px rgba(20,65,120,.2); }
-.brand-mark img, .footer-mark img { width: 32px; height: 32px; object-fit: contain; }
+.brand-mark img, .footer-mark img { width: 36px; height: 36px; object-fit: contain; }
 .nav-links { display: flex; gap: 30px; margin-left: auto; }
 .nav-links a { position: relative; color: #4b5565; text-decoration: none; font-weight: 600; font-size: .91rem; }
 .nav-links a::after { content: ""; position: absolute; left: 0; bottom: -8px; width: 100%; height: 2px; background: var(--blue); transform: scaleX(0); transition: transform .2s; }

@@ -119,3 +119,13 @@ copyButton?.addEventListener("click", async () => {
     copyButton.textContent = "Select text to copy";
   }
 });
+
+document.querySelectorAll("video").forEach((video) => {
+  video.addEventListener("ended", () => video.load());
+  video.addEventListener("loadedmetadata", () => {
+    if (video.duration && video.currentTime >= video.duration - 0.25) {
+      video.currentTime = 0;
+      video.pause();
+    }
+  }, { once: true });
+});

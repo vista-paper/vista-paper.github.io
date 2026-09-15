@@ -100,11 +100,22 @@ document.querySelectorAll("[data-lightbox]").forEach((button) => {
 document.querySelector("[data-lightbox-close]")?.addEventListener("click", () => dialog.close());
 dialog?.addEventListener("click", (event) => { if (event.target === dialog) dialog.close(); });
 
-document.querySelectorAll("[data-method-explainer]").forEach((explainer) => {
-  const toggle = explainer.querySelector(".method-explainer-toggle");
-  toggle?.addEventListener("click", () => {
-    const open = explainer.classList.toggle("explainer-open");
-    toggle.setAttribute("aria-expanded", String(open));
+const simVideo = document.querySelector("[data-sim-rollout]");
+const simTitle = document.querySelector("[data-sim-title]");
+const simTasks = [...document.querySelectorAll("[data-sim-task]")];
+simTasks.forEach((task) => {
+  task.addEventListener("click", () => {
+    if (!simVideo) return;
+    const alreadySelected = task.getAttribute("aria-pressed") === "true";
+    simTasks.forEach((candidate) => candidate.setAttribute("aria-pressed", String(candidate === task)));
+    if (simTitle) simTitle.textContent = task.dataset.simLabel || task.textContent.trim();
+    if (!alreadySelected) {
+      simVideo.pause();
+      simVideo.poster = task.dataset.simPoster || "";
+      simVideo.src = task.dataset.simSrc;
+      simVideo.load();
+    }
+    simVideo.play().catch(() => {});
   });
 });
 

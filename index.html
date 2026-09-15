@@ -75,10 +75,10 @@
           <div class="section-heading split-heading reveal"><div><p class="eyebrow">02 · Method</p><h2>Geometry is built into the policy.</h2></div><p>VISTA preserves how observations and actions should transform under workspace rotations, helping the policy generalize beyond the poses present in demonstrations.</p></div>
           <article class="figure-card method-card reveal">
             <button class="figure-button" type="button" data-lightbox="assets/figures/method.png" aria-label="Open VISTA method figure"><img loading="lazy" src="assets/figures/method.png" alt="Overview of the VISTA architecture from visual and tactile observations to workspace-equivariant action prediction" /><span class="zoom-hint" aria-hidden="true">Open figure ↗</span></button>
-            <div class="method-explainer" data-method-explainer>
-              <button class="method-explainer-toggle" type="button" aria-expanded="false" aria-controls="method-explainer-note"><span aria-hidden="true">i</span> Why this sequence?</button>
-              <div class="method-explainer-panel" id="method-explainer-note" role="note"><strong>Where the policy property comes from.</strong> The encoders create a sensor-local spherical indexing, and fusion keeps that indexing intact. The end-effector rotation then aligns the fused representation with the workspace, where the equivariant diffusion decoder predicts actions. Workspace-level equivariance belongs to this complete sequence.</div>
-            </div>
+            <details class="method-explainer">
+              <summary><span aria-hidden="true">i</span> Why this sequence?</summary>
+              <div class="method-explainer-panel"><strong>Where the policy property comes from.</strong> The encoders create a sensor-local spherical indexing, and fusion keeps that indexing intact. The end-effector rotation then aligns the fused representation with the workspace, where the equivariant diffusion decoder predicts actions. Workspace-level equivariance belongs to this complete sequence.</div>
+            </details>
           </article>
           <div class="method-steps reveal">
             <article><span>01</span><h3>Lift to the sphere</h3><p>Egocentric RGB and tactile images become steerable spherical tokens with a shared geometric structure.</p></article>
@@ -94,6 +94,25 @@
           <article class="environment-card reveal">
             <div class="card-heading"><div><span>Simulation</span><h3>Eight geometry-sensitive tasks</h3></div><p>50 demonstrations per task</p></div>
             <button class="figure-button" type="button" data-lightbox="assets/figures/sim-environments.png" aria-label="Open simulated environments figure"><img loading="lazy" src="assets/figures/sim-environments.png" alt="Eight simulated contact-rich manipulation tasks used to evaluate VISTA" /></button>
+          </article>
+          <article class="sim-rollouts reveal">
+            <div class="card-heading"><div><span>Policy rollouts</span><h3>Watch VISTA solve all eight tasks</h3></div><p>Agent, wrist, and tactile views</p></div>
+            <div class="sim-viewer">
+              <div class="sim-stage">
+                <video data-sim-rollout controls muted loop playsinline preload="metadata" poster="assets/posters/sim/grasp-classify.jpg" src="assets/videos/sim/grasp-classify.mp4">Your browser does not support HTML video.</video>
+                <div class="sim-now-playing"><span>Now playing</span><strong data-sim-title aria-live="polite">Grasp Classify</strong></div>
+              </div>
+              <div class="sim-task-picker" aria-label="Choose a simulation task">
+                <button type="button" aria-pressed="true" data-sim-task data-sim-label="Grasp Classify" data-sim-src="assets/videos/sim/grasp-classify.mp4" data-sim-poster="assets/posters/sim/grasp-classify.jpg"><span>01</span>Grasp Classify</button>
+                <button type="button" aria-pressed="false" data-sim-task data-sim-label="Insert HDMI" data-sim-src="assets/videos/sim/insert-hdmi.mp4" data-sim-poster="assets/posters/sim/insert-hdmi.jpg"><span>02</span>Insert HDMI</button>
+                <button type="button" aria-pressed="false" data-sim-task data-sim-label="Insert Hole" data-sim-src="assets/videos/sim/insert-hole.mp4" data-sim-poster="assets/posters/sim/insert-hole.jpg"><span>03</span>Insert Hole</button>
+                <button type="button" aria-pressed="false" data-sim-task data-sim-label="Insert Tube" data-sim-src="assets/videos/sim/insert-tube.mp4" data-sim-poster="assets/posters/sim/insert-tube.jpg"><span>04</span>Insert Tube</button>
+                <button type="button" aria-pressed="false" data-sim-task data-sim-label="Lift Bottle" data-sim-src="assets/videos/sim/lift-bottle.mp4" data-sim-poster="assets/posters/sim/lift-bottle.jpg"><span>05</span>Lift Bottle</button>
+                <button type="button" aria-pressed="false" data-sim-task data-sim-label="Lift Can" data-sim-src="assets/videos/sim/lift-can.mp4" data-sim-poster="assets/posters/sim/lift-can.jpg"><span>06</span>Lift Can</button>
+                <button type="button" aria-pressed="false" data-sim-task data-sim-label="Put Bottle in Shelf" data-sim-src="assets/videos/sim/put-bottle-in-shelf.mp4" data-sim-poster="assets/posters/sim/put-bottle-in-shelf.jpg"><span>07</span>Put Bottle in Shelf</button>
+                <button type="button" aria-pressed="false" data-sim-task data-sim-label="Pull Out Key" data-sim-src="assets/videos/sim/pull-out-key.mp4" data-sim-poster="assets/posters/sim/pull-out-key.jpg"><span>08</span>Pull Out Key</button>
+              </div>
+            </div>
           </article>
           <div class="result-grid">
             <article class="result-card reveal"><div class="card-heading"><div><span>Main results</span><h3>VISTA leads across tasks</h3></div></div><button class="figure-button" type="button" data-lightbox="assets/figures/sim-main-summary.png" aria-label="Open main simulation results"><img loading="lazy" src="assets/figures/sim-main-summary.png" alt="Simulation performance comparison between VISTA and baselines" /></button></article>

@@ -28,14 +28,6 @@ if (!reducedMotion) {
     document.documentElement.style.setProperty("--orb-x-reverse", `${(-x * 11).toFixed(2)}px`);
     document.documentElement.style.setProperty("--orb-y-reverse", `${(-y * 11).toFixed(2)}px`);
   }, { passive: true });
-  const tilt = document.querySelector("[data-tilt]");
-  tilt?.addEventListener("pointermove", (event) => {
-    const rect = tilt.getBoundingClientRect();
-    const x = (event.clientX - rect.left) / rect.width - 0.5;
-    const y = (event.clientY - rect.top) / rect.height - 0.5;
-    tilt.style.transform = `perspective(900px) rotateX(${(-y * 2.2).toFixed(2)}deg) rotateY(${(x * 2.2).toFixed(2)}deg)`;
-  });
-  tilt?.addEventListener("pointerleave", () => { tilt.style.transform = ""; });
 }
 
 const tabs = [...document.querySelectorAll("[data-tab]")];

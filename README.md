@@ -2,7 +2,7 @@
 
 Project page for **Equivariant Visual-Tactile Diffusion Policy for Contact-Rich Manipulation** (CoRL 2026).
 
-The site is published at <https://vista-paper.github.io/>.
+The current preview is published at <https://kenn3o3.github.io/vista-paper.github.io/>. After this repository is transferred to the `vista-paper` GitHub organization, its canonical address will be <https://vista-paper.github.io/>.
 
 ## Local preview
 

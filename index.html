@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css?v=11" />
+    <link rel="stylesheet" href="styles.css?v=12" />
     <script src="script.js" defer></script>
   </head>
   <body>
@@ -77,7 +77,7 @@
             <button class="figure-button" type="button" data-lightbox="assets/figures/method.png" aria-label="Open VISTA method figure"><img loading="lazy" src="assets/figures/method.png" alt="Overview of the VISTA architecture from visual and tactile observations to workspace-equivariant action prediction" /><span class="zoom-hint" aria-hidden="true">Open figure ↗</span></button>
             <details class="method-explainer">
               <summary><span aria-hidden="true">i</span> Why this sequence?</summary>
-              <div class="method-explainer-panel"><strong>Where the policy property comes from.</strong> The encoders create sensor-local spherical tokens, and fusion combines visual and tactile cues while preserving the sphere's indexing. This preservation is a compatibility property; fusion itself does not establish workspace-level equivariance. That property comes from the equivariance correction, which uses the end-effector rotation to align the fused representation with the workspace, together with the equivariant diffusion decoder. Our fusion design is responsible for using the two modalities effectively, which is reflected in the higher task success rates.</div>
+              <div class="method-explainer-panel"><strong>Where the policy property comes from.</strong> The encoders create sensor-local spherical tokens, and fusion combines visual and tactile cues while preserving the sphere's indexing. Our experiments show that this fusion design uses both modalities effectively and improves task success. Workspace-level equivariance comes from the equivariance correction and the equivariant diffusion decoder. Following the influential <a href="https://isp-3d.github.io/" target="_blank" rel="noreferrer">ISP</a> approach, the correction uses the end-effector rotation to align the local representation with the workspace.</div>
             </details>
           </article>
           <div class="method-steps reveal">

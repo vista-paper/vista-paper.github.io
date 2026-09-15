@@ -109,6 +109,7 @@ sup { font-size: .67em; vertical-align: super; }
 .method-explainer summary span { display: grid; place-items: center; width: 19px; height: 19px; border-radius: 50%; color: var(--navy); background: #75d9e4; font-family: Georgia,serif; font-weight: 800; }
 .method-explainer-panel { margin-top: 11px; padding: 15px 17px; border-radius: 14px; color: #516076; background: #f3f7fc; font-size: .8rem; line-height: 1.55; }
 .method-explainer-panel strong { display: block; margin-bottom: 4px; color: var(--ink); }
+.method-explainer-panel a { color: var(--blue); font-weight: 700; text-underline-offset: 2px; }
 .method-steps { display: grid; grid-template-columns: repeat(3,1fr); gap: 18px; margin-top: 20px; }
 .method-steps article { position: relative; padding: 29px; border: 1px solid var(--line); border-radius: 21px; background: rgba(255,255,255,.72); overflow: hidden; }
 .method-steps article::after { content: ""; position: absolute; width: 80px; height: 80px; right: -30px; top: -30px; border-radius: 50%; background: rgba(20,99,255,.06); }

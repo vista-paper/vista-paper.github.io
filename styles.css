@@ -87,6 +87,8 @@ sup { font-size: .67em; vertical-align: super; }
 .abstract-card { padding: 25px 27px; background: linear-gradient(145deg,#fff,#f8fbff); }
 .abstract-card p:not(.card-index) { margin-bottom: 12px; color: #4d586a; font-size: .85rem; line-height: 1.52; }
 .abstract-card strong { color: var(--ink); }
+.abstract-card .positioning-note { margin: 14px 0; padding: 11px 13px; border-left: 3px solid var(--blue); border-radius: 4px 12px 12px 4px; color: #3e4b60; background: rgba(20,99,255,.055); font-size: .76rem; line-height: 1.5; }
+.positioning-note a { color: var(--blue); font-weight: 700; text-decoration-thickness: 1px; text-underline-offset: 2px; }
 .card-index { margin-bottom: 12px; color: var(--blue); font-family: "Manrope",sans-serif; font-weight: 800; }
 .keyword-list { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 15px; }
 .keyword-list span { padding: 4px 8px; border: 1px solid #dce4ef; border-radius: 999px; color: #536074; background: #fff; font-size: .66rem; font-weight: 700; }

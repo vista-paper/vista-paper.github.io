@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f6f8fb" />
+    <meta name="description" content="VISTA is an equivariant visual-tactile diffusion policy for data-efficient, spatially robust contact-rich manipulation." />
+    <title>VISTA · Equivariant Visual-Tactile Diffusion Policy</title>
+    <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header" data-header>
+      <nav class="nav shell" aria-label="Primary navigation">
+        <a class="brand" href="#top" aria-label="VISTA home"><span class="brand-mark" aria-hidden="true">V</span><span>VISTA</span></a>
+        <div class="nav-links">
+          <a href="#overview">Overview</a><a href="#method">Method</a><a href="#experiments">Experiments</a><a href="#citation">Citation</a>
+        </div>
+        <a class="nav-code" href="https://github.com/Kenn3o3/Vista" target="_blank" rel="noreferrer"><img src="assets/icons/github.svg" alt="" />Code</a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="top">
+        <div class="hero-orb hero-orb-one" aria-hidden="true"></div><div class="hero-orb hero-orb-two" aria-hidden="true"></div>
+        <div class="shell hero-shell">
+          <div class="hero-copy reveal">
+            <div class="venue-pill"><span></span> Conference on Robot Learning · 2026</div>
+            <p class="hero-kicker">Equivariant visuotactile learning</p>
+            <h1>Equivariant Visual-Tactile Diffusion Policy for <span>Contact-Rich Manipulation</span></h1>
+            <div class="authors" aria-label="Authors">
+              <a href="https://kenn3o3.github.io/" target="_blank" rel="noreferrer">WONG Lik Hang Kenny<sup>1</sup></a>
+              <a href="https://yiyao-ma.github.io/" target="_blank" rel="noreferrer">Yiyao Ma<sup>1</sup></a>
+              <span>Xiu-Shen Wei<sup>2</sup></span><span>Zelong Tan<sup>1</sup></span><span>Zhuheng Song<sup>1</sup></span><span>Dongsheng Xie<sup>1</sup></span>
+              <a href="https://ck-kai.github.io/" target="_blank" rel="noreferrer">Kai Chen<sup>1</sup></a>
+              <a href="https://www.cse.cuhk.edu.hk/~qdou/index.html" target="_blank" rel="noreferrer">Qi Dou<sup>1</sup></a>
+            </div>
+            <div class="affiliations"><p><sup>1</sup> The Chinese University of Hong Kong</p><p><sup>2</sup> Southeast University</p></div>
+            <div class="hero-actions" aria-label="Project links">
+              <span class="button button-disabled" aria-disabled="true" title="The paper link will be added after arXiv release"><img src="assets/icons/arxiv.svg" alt="" />Paper <span class="button-note">Coming Soon</span></span>
+              <a class="button button-dark" href="https://github.com/Kenn3o3/Vista" target="_blank" rel="noreferrer"><img src="assets/icons/github.svg" alt="" /> Main Code</a>
+              <a class="button button-light" href="https://github.com/Kenn3o3/vt_franka" target="_blank" rel="noreferrer">Robot Code <span aria-hidden="true">↗</span></a>
+              <a class="button button-light" href="https://modelscope.cn/datasets/kenn3o3/MIDFOV_EXPERIMENT" target="_blank" rel="noreferrer">Dataset <span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+          <figure class="teaser-card reveal" data-tilt>
+            <div class="teaser-label">Spatially robust manipulation</div>
+            <button class="figure-button" type="button" data-lightbox="assets/figures/teaser.png" aria-label="Open teaser figure"><img src="assets/figures/teaser.png" alt="VISTA pencil insertion under rotated object and end-effector configurations" /></button>
+            <figcaption>VISTA learns consistent manipulation behavior across changes in object pose, end-effector pose, and contact configuration.</figcaption>
+          </figure>
+        </div>
+        <div class="scroll-cue" aria-hidden="true"><span></span> Explore the project</div>
+      </section>
+
+      <section class="section" id="overview">
+        <div class="shell">
+          <div class="section-heading reveal"><p class="eyebrow">01 · Overview</p><h2>Learning contact-rich skills from fewer demonstrations.</h2><p>VISTA combines vision, touch, and robot state in a geometry-aware policy that transfers learned behavior across spatial configurations.</p></div>
+          <div class="overview-grid">
+            <article class="video-feature reveal"><div class="media-topline"><span>Three-minute presentation</span><span>03:00</span></div><video controls preload="metadata" poster="assets/posters/overview.jpg"><source src="assets/videos/overview.mp4" type="video/mp4" />Your browser does not support HTML video.</video></article>
+            <article class="abstract-card reveal">
+              <p class="card-index">Abstract</p>
+              <p>Imitation learning for contact-rich manipulation requires high-quality expert data that is expensive to obtain. This makes learning a spatially robust policy under limited demonstrations a key issue. To address this, we propose <strong>VISTA</strong>, an equivariant visuotactile diffusion policy for data-efficient contact-rich imitation learning.</p>
+              <p>VISTA projects visual and tactile observations into spherical tokens, injects tactile contact cues into visual spherical directions through permutation-equivariant spherical fusion, and rotates the fused harmonic representation using the end-effector orientation. The resulting representation conditions an equivariant diffusion policy to predict spatially consistent actions. Extensive simulation and real-world experiments show substantial gains in data efficiency and spatial robustness over strong visuotactile imitation-learning baselines.</p>
+              <div class="keyword-list" aria-label="Keywords"><span>Visuo-tactile manipulation</span><span>Equivariant learning</span><span>Diffusion policy</span></div>
+            </article>
+          </div>
+          <div class="metrics reveal" aria-label="Key results">
+            <div><strong>80.9<small>%</small></strong><span>Mean simulation success</span></div><div><strong>+15.9<small> pp</small></strong><span>Over the strongest baseline</span></div><div><strong>73.3<small>%</small></strong><span>Average real-robot success</span></div><div><strong>50</strong><span>Demonstrations per task</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-tinted" id="method">
+        <div class="shell">
+          <div class="section-heading split-heading reveal"><div><p class="eyebrow">02 · Method</p><h2>Geometry is built into the policy.</h2></div><p>VISTA preserves how observations and actions should transform under workspace rotations, helping the policy generalize beyond the poses present in demonstrations.</p></div>
+          <article class="figure-card method-card reveal"><button class="figure-button" type="button" data-lightbox="assets/figures/method.png" aria-label="Open VISTA method figure"><img loading="lazy" src="assets/figures/method.png" alt="Overview of the VISTA architecture from visual and tactile observations to equivariant action prediction" /><span class="zoom-hint" aria-hidden="true">Expand ↗</span></button></article>
+          <div class="method-steps reveal">
+            <article><span>01</span><h3>Lift to the sphere</h3><p>Egocentric RGB and tactile images become steerable spherical tokens with a shared geometric structure.</p></article>
+            <article><span>02</span><h3>Fuse contact and scene cues</h3><p>Permutation-equivariant fusion lets tactile contact modulate the visual directions that matter for control.</p></article>
+            <article><span>03</span><h3>Predict consistent actions</h3><p>Orientation alignment and an equivariant diffusion decoder produce actions that follow workspace rotations.</p></article>
+          </div>
+          <article class="fusion-card reveal">
+            <div class="fusion-copy"><p class="eyebrow">Spherical fusion</p><h3>Touch gains direction through vision.</h3><p>The same local contact can call for a different world-frame correction depending on the end-effector pose and surrounding geometry. VISTA aligns these cues while preserving equivariance.</p></div>
+            <button class="figure-button" type="button" data-lightbox="assets/figures/fusion-equivariance.png" aria-label="Open spherical fusion equivariance figure"><img loading="lazy" src="assets/figures/fusion-equivariance.png" alt="Permutation-equivariant spherical fusion between visual directions and tactile contact cues" /></button>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="experiments">
+        <div class="shell">
+          <div class="section-heading split-heading reveal"><div><p class="eyebrow">03 · Experiments</p><h2>Spatial robustness in simulation and on hardware.</h2></div><p>We evaluate VISTA on eight simulated tasks and three contact-rich real-robot tasks under limited demonstrations.</p></div>
+          <article class="environment-card reveal">
+            <div class="card-heading"><div><span>Simulation</span><h3>Eight geometry-sensitive tasks</h3></div><p>50 demonstrations per task</p></div>
+            <button class="figure-button" type="button" data-lightbox="assets/figures/sim-environments.png" aria-label="Open simulated environments figure"><img loading="lazy" src="assets/figures/sim-environments.png" alt="Eight simulated contact-rich manipulation tasks used to evaluate VISTA" /></button>
+          </article>
+          <div class="result-grid">
+            <article class="result-card reveal"><div class="card-heading"><div><span>Main results</span><h3>VISTA leads across tasks</h3></div></div><button class="figure-button" type="button" data-lightbox="assets/figures/sim-main-summary.png" aria-label="Open main simulation results"><img loading="lazy" src="assets/figures/sim-main-summary.png" alt="Simulation performance comparison between VISTA and baselines" /></button></article>
+            <article class="result-card reveal"><div class="card-heading"><div><span>Data efficiency</span><h3>Strong results with half the data</h3></div></div><button class="figure-button" type="button" data-lightbox="assets/figures/sim-data-efficiency.png" aria-label="Open simulation data efficiency results"><img loading="lazy" src="assets/figures/sim-data-efficiency.png" alt="VISTA data-efficiency results with 50 and 100 demonstrations" /></button></article>
+          </div>
+          <div class="ablation-grid reveal"><div class="ablation-copy"><p class="eyebrow">Ablations</p><h3>Each geometric component contributes.</h3><p>Removing tactile spherical features, changing the fusion strategy, or weakening the group structure reduces performance on geometry-sensitive tasks.</p></div><button class="figure-button" type="button" data-lightbox="assets/figures/sim-ablation-efficiency.png" aria-label="Open ablation results"><img loading="lazy" src="assets/figures/sim-ablation-efficiency.png" alt="Ablation summary for tactile input, spherical fusion, and equivariant group structure" /></button></div>
+        </div>
+      </section>
+
+      <section class="section section-dark" id="robot-demos">
+        <div class="shell">
+          <div class="section-heading split-heading reveal"><div><p class="eyebrow">04 · Real robot</p><h2>Contact-rich manipulation, up close.</h2></div><p>Choose a task to inspect successful rollouts. Paired videos keep the external and wrist-camera views synchronized.</p></div>
+          <div class="demo-tabs reveal" role="tablist" aria-label="Real-robot tasks">
+            <button id="tab-erase" role="tab" aria-selected="true" aria-controls="panel-erase" data-tab="erase"><span>Erase</span><strong>9 / 10</strong></button>
+            <button id="tab-pencil" role="tab" aria-selected="false" aria-controls="panel-pencil" data-tab="pencil" tabindex="-1"><span>Insert pencil</span><strong>8 / 10</strong></button>
+            <button id="tab-usb" role="tab" aria-selected="false" aria-controls="panel-usb" data-tab="usb" tabindex="-1"><span>Insert USB</span><strong>5 / 10</strong></button>
+          </div>
+          <div class="demo-panel" id="panel-erase" role="tabpanel" aria-labelledby="tab-erase" data-panel="erase">
+            <div class="demo-intro"><span>Surface contact</span><p>VISTA maintains stable contact while following the target erasing trajectory.</p></div>
+            <div class="erase-grid"><article class="demo-card"><div class="demo-label"><span>Trial 01</span><span>External view</span></div><video controls preload="metadata" poster="assets/posters/erase-01.jpg"><source src="assets/videos/erase-01.mp4" type="video/mp4" /></video></article><article class="demo-card"><div class="demo-label"><span>Trial 02</span><span>External view</span></div><video controls preload="metadata" poster="assets/posters/erase-02.jpg"><source src="assets/videos/erase-02.mp4" type="video/mp4" /></video></article></div>
+          </div>
+          <div class="demo-panel" id="panel-pencil" role="tabpanel" aria-labelledby="tab-pencil" data-panel="pencil" hidden>
+            <div class="demo-intro"><span>Precision insertion</span><p>External and wrist views show how the policy aligns the pencil with the holder under pose variation.</p></div>
+            <div class="trial-stack">
+              <article class="paired-trial" data-sync-group="pencil-01"><div class="trial-heading"><span>Trial 01</span><small>Views play in sync</small></div><div class="video-pair"><div><span>External view</span><video controls preload="metadata" poster="assets/posters/pencil-01-main.jpg"><source src="assets/videos/pencil-01-main.mp4" type="video/mp4" /></video></div><div><span>Wrist camera</span><video controls preload="metadata" poster="assets/posters/pencil-01-wrist.jpg"><source src="assets/videos/pencil-01-wrist.mp4" type="video/mp4" /></video></div></div></article>
+              <article class="paired-trial" data-sync-group="pencil-02"><div class="trial-heading"><span>Trial 02</span><small>Views play in sync</small></div><div class="video-pair"><div><span>External view</span><video controls preload="metadata" poster="assets/posters/pencil-02-main.jpg"><source src="assets/videos/pencil-02-main.mp4" type="video/mp4" /></video></div><div><span>Wrist camera</span><video controls preload="metadata" poster="assets/posters/pencil-02-wrist.jpg"><source src="assets/videos/pencil-02-wrist.mp4" type="video/mp4" /></video></div></div></article>
+            </div>
+          </div>
+          <div class="demo-panel" id="panel-usb" role="tabpanel" aria-labelledby="tab-usb" data-panel="usb" hidden>
+            <div class="demo-intro"><span>Tight insertion</span><p>VISTA uses contact feedback to correct alignment as the USB approaches and enters the port.</p></div>
+            <div class="trial-stack">
+              <article class="paired-trial" data-sync-group="usb-01"><div class="trial-heading"><span>Trial 01</span><small>Views play in sync</small></div><div class="video-pair"><div><span>External view</span><video controls preload="metadata" poster="assets/posters/usb-01-main.jpg"><source src="assets/videos/usb-01-main.mp4" type="video/mp4" /></video></div><div><span>Wrist camera</span><video controls preload="metadata" poster="assets/posters/usb-01-wrist.jpg"><source src="assets/videos/usb-01-wrist.mp4" type="video/mp4" /></video></div></div></article>
+              <article class="paired-trial" data-sync-group="usb-02"><div class="trial-heading"><span>Trial 02</span><small>Views play in sync</small></div><div class="video-pair"><div><span>External view</span><video controls preload="metadata" poster="assets/posters/usb-02-main.jpg"><source src="assets/videos/usb-02-main.mp4" type="video/mp4" /></video></div><div><span>Wrist camera</span><video controls preload="metadata" poster="assets/posters/usb-02-wrist.jpg"><source src="assets/videos/usb-02-wrist.mp4" type="video/mp4" /></video></div></div></article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="citation">
+        <div class="shell citation-shell">
+          <div class="section-heading reveal"><p class="eyebrow">05 · Citation</p><h2>Build on VISTA.</h2><p>The archival paper link will be added after the arXiv release.</p></div>
+          <div class="citation-card reveal"><div class="citation-topline"><span>BibTeX</span><button type="button" data-copy-citation>Copy citation</button></div><pre id="bibtex"><code>@inproceedings{wong2026vista,
+  title     = {Equivariant Visual-Tactile Diffusion Policy for
+               Contact-Rich Manipulation},
+  author    = {Wong, Lik Hang Kenny and Ma, Yiyao and Wei, Xiu-Shen
+               and Tan, Zelong and Song, Zhuheng and Xie, Dongsheng
+               and Chen, Kai and Dou, Qi},
+  booktitle = {Conference on Robot Learning},
+  year      = {2026}
+}</code></pre></div>
+        </div>
+      </section>
+    </main>
+
+    <footer><div class="shell footer-grid"><div><span class="footer-mark">V</span><p>Equivariant Visual-Tactile Diffusion Policy</p></div><p>CoRL 2026 · Built for research and reproducibility.</p><div class="footer-links"><a href="https://github.com/Kenn3o3/Vista" target="_blank" rel="noreferrer">Main code</a><a href="https://github.com/Kenn3o3/vt_franka" target="_blank" rel="noreferrer">Robot code</a><a href="https://modelscope.cn/datasets/kenn3o3/MIDFOV_EXPERIMENT" target="_blank" rel="noreferrer">Dataset</a></div></div></footer>
+    <dialog class="lightbox" data-lightbox-dialog aria-label="Expanded research figure"><button type="button" data-lightbox-close aria-label="Close expanded figure">×</button><img src="" alt="Expanded research figure" /></dialog>
+  </body>
+</html>

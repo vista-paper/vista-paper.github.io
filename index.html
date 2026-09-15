@@ -85,10 +85,6 @@
             <article><span>02</span><h3>Fuse contact and scene cues</h3><p>Permutation-equivariant fusion conditions each visual direction on tactile evidence without changing the spherical token indexing.</p></article>
             <article><span>03</span><h3>Predict consistent actions</h3><p>The end-effector orientation aligns the fused representation to the workspace; an equivariant decoder then predicts spatially consistent actions.</p></article>
           </div>
-          <article class="fusion-card reveal">
-            <div class="fusion-copy"><p class="eyebrow">Fusion property</p><h3>Tactile conditioning preserves spherical structure.</h3><p>The fusion module is permutation equivariant: reindexing the visual sphere reindexes the fused output, while tactile-token ordering does not affect the aggregate. This compatibility property keeps tactile conditioning from breaking the spherical indexing needed downstream. Workspace-level equivariance is established by the full pipeline, including end-effector orientation alignment and the equivariant diffusion decoder.</p></div>
-            <button class="figure-button" type="button" data-lightbox="assets/figures/fusion-equivariance.png" aria-label="Open spherical fusion property figure"><img loading="lazy" src="assets/figures/fusion-equivariance.png" alt="Illustration of the index-preservation property of spherical fusion" /></button>
-          </article>
         </div>
       </section>
 

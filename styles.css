@@ -98,9 +98,16 @@ sup { font-size: .67em; vertical-align: super; }
 
 .figure-button { position: relative; width: 100%; padding: 0; border: 0; background: transparent; cursor: zoom-in; }
 .figure-card { padding: 25px; overflow: hidden; }
+.method-card { position: relative; }
 .method-card img { width: 100%; }
 .zoom-hint { position: absolute; right: 14px; bottom: 14px; padding: 7px 10px; border-radius: 9px; color: #fff; background: rgba(7,17,31,.78); font-size: .72rem; font-weight: 700; opacity: 0; transform: translateY(5px); transition: opacity .2s,transform .2s; }
 .figure-button:hover .zoom-hint { opacity: 1; transform: none; }
+.method-explainer { position: absolute; z-index: 3; left: 39px; bottom: 39px; width: min(540px,calc(100% - 120px)); }
+.method-explainer-toggle { display: inline-flex; align-items: center; gap: 8px; padding: 8px 12px; border: 1px solid rgba(255,255,255,.22); border-radius: 999px; color: #fff; background: rgba(7,17,31,.88); box-shadow: 0 8px 24px rgba(7,17,31,.18); backdrop-filter: blur(10px); cursor: pointer; font-size: .74rem; font-weight: 700; }
+.method-explainer-toggle span { display: grid; place-items: center; width: 18px; height: 18px; border-radius: 50%; color: var(--navy); background: #75d9e4; font-family: Georgia,serif; font-weight: 800; }
+.method-explainer-panel { position: absolute; left: 0; bottom: calc(100% + 10px); width: 100%; padding: 15px 17px; border: 1px solid rgba(255,255,255,.16); border-radius: 14px; color: #dbe6f3; background: rgba(7,17,31,.94); box-shadow: 0 16px 45px rgba(7,17,31,.28); backdrop-filter: blur(14px); font-size: .78rem; line-height: 1.55; opacity: 0; visibility: hidden; transform: translateY(8px); transition: opacity .2s,visibility .2s,transform .2s; pointer-events: none; }
+.method-explainer-panel strong { display: block; margin-bottom: 4px; color: #fff; }
+.method-explainer.explainer-open .method-explainer-panel { opacity: 1; visibility: visible; transform: none; pointer-events: auto; }
 .method-steps { display: grid; grid-template-columns: repeat(3,1fr); gap: 18px; margin-top: 20px; }
 .method-steps article { position: relative; padding: 29px; border: 1px solid var(--line); border-radius: 21px; background: rgba(255,255,255,.72); overflow: hidden; }
 .method-steps article::after { content: ""; position: absolute; width: 80px; height: 80px; right: -30px; top: -30px; border-radius: 50%; background: rgba(20,99,255,.06); }
@@ -202,6 +209,9 @@ footer { padding: 48px 0; color: #97a4b6; background: #060d17; }
   .metrics > div { min-height: 135px; padding: 20px; }
   .metrics strong { font-size: 2rem; }
   .figure-card, .environment-card, .result-card { padding: 14px; border-radius: 19px; }
+  .method-explainer { position: relative; left: auto; bottom: auto; width: 100%; margin-top: 12px; }
+  .method-explainer-toggle { color: var(--ink); border-color: var(--line); background: #f5f8fc; box-shadow: none; }
+  .method-explainer-panel { position: relative; bottom: auto; margin-top: 9px; color: #dbe6f3; }
   .method-steps { grid-template-columns: 1fr; }
   .method-steps article { padding: 23px; }
   .fusion-card { padding: 18px; gap: 15px; }
@@ -215,6 +225,10 @@ footer { padding: 48px 0; color: #97a4b6; background: #060d17; }
   .erase-grid, .video-pair { grid-template-columns: 1fr; }
   .citation-shell { gap: 10px; }
   pre { padding: 21px; font-size: .72rem; }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .method-card:hover .method-explainer-panel { opacity: 1; visibility: visible; transform: none; pointer-events: auto; }
 }
 
 @media (max-width: 460px) {

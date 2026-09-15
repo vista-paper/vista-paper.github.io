@@ -100,6 +100,14 @@ document.querySelectorAll("[data-lightbox]").forEach((button) => {
 document.querySelector("[data-lightbox-close]")?.addEventListener("click", () => dialog.close());
 dialog?.addEventListener("click", (event) => { if (event.target === dialog) dialog.close(); });
 
+document.querySelectorAll("[data-method-explainer]").forEach((explainer) => {
+  const toggle = explainer.querySelector(".method-explainer-toggle");
+  toggle?.addEventListener("click", () => {
+    const open = explainer.classList.toggle("explainer-open");
+    toggle.setAttribute("aria-expanded", String(open));
+  });
+});
+
 const copyButton = document.querySelector("[data-copy-citation]");
 copyButton?.addEventListener("click", async () => {
   const citation = document.querySelector("#bibtex")?.innerText || "";

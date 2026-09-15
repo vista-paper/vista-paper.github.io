@@ -73,15 +73,21 @@
       <section class="section section-tinted" id="method">
         <div class="shell">
           <div class="section-heading split-heading reveal"><div><p class="eyebrow">02 · Method</p><h2>Geometry is built into the policy.</h2></div><p>VISTA preserves how observations and actions should transform under workspace rotations, helping the policy generalize beyond the poses present in demonstrations.</p></div>
-          <article class="figure-card method-card reveal"><button class="figure-button" type="button" data-lightbox="assets/figures/method.png" aria-label="Open VISTA method figure"><img loading="lazy" src="assets/figures/method.png" alt="Overview of the VISTA architecture from visual and tactile observations to equivariant action prediction" /><span class="zoom-hint" aria-hidden="true">Expand ↗</span></button></article>
+          <article class="figure-card method-card reveal">
+            <button class="figure-button" type="button" data-lightbox="assets/figures/method.png" aria-label="Open VISTA method figure"><img loading="lazy" src="assets/figures/method.png" alt="Overview of the VISTA architecture from visual and tactile observations to workspace-equivariant action prediction" /><span class="zoom-hint" aria-hidden="true">Open figure ↗</span></button>
+            <div class="method-explainer" data-method-explainer>
+              <button class="method-explainer-toggle" type="button" aria-expanded="false" aria-controls="method-explainer-note"><span aria-hidden="true">i</span> Why this sequence?</button>
+              <div class="method-explainer-panel" id="method-explainer-note" role="note"><strong>Where the policy property comes from.</strong> The encoders create a sensor-local spherical indexing, and fusion keeps that indexing intact. The end-effector rotation then aligns the fused representation with the workspace, where the equivariant diffusion decoder predicts actions. Workspace-level equivariance belongs to this complete sequence.</div>
+            </div>
+          </article>
           <div class="method-steps reveal">
             <article><span>01</span><h3>Lift to the sphere</h3><p>Egocentric RGB and tactile images become steerable spherical tokens with a shared geometric structure.</p></article>
-            <article><span>02</span><h3>Fuse contact and scene cues</h3><p>Permutation-equivariant fusion lets tactile contact modulate the visual directions that matter for control.</p></article>
-            <article><span>03</span><h3>Predict consistent actions</h3><p>Orientation alignment and an equivariant diffusion decoder produce actions that follow workspace rotations.</p></article>
+            <article><span>02</span><h3>Fuse contact and scene cues</h3><p>Permutation-equivariant fusion conditions each visual direction on tactile evidence without changing the spherical token indexing.</p></article>
+            <article><span>03</span><h3>Predict consistent actions</h3><p>The end-effector orientation aligns the fused representation to the workspace; an equivariant decoder then predicts spatially consistent actions.</p></article>
           </div>
           <article class="fusion-card reveal">
-            <div class="fusion-copy"><p class="eyebrow">Spherical fusion</p><h3>Touch gains direction through vision.</h3><p>The same local contact can call for a different world-frame correction depending on the end-effector pose and surrounding geometry. VISTA aligns these cues while preserving equivariance.</p></div>
-            <button class="figure-button" type="button" data-lightbox="assets/figures/fusion-equivariance.png" aria-label="Open spherical fusion equivariance figure"><img loading="lazy" src="assets/figures/fusion-equivariance.png" alt="Permutation-equivariant spherical fusion between visual directions and tactile contact cues" /></button>
+            <div class="fusion-copy"><p class="eyebrow">Fusion property</p><h3>Tactile conditioning preserves spherical structure.</h3><p>The fusion module is permutation equivariant: reindexing the visual sphere reindexes the fused output, while tactile-token ordering does not affect the aggregate. This compatibility property keeps tactile conditioning from breaking the spherical indexing needed downstream. Workspace-level equivariance is established by the full pipeline, including end-effector orientation alignment and the equivariant diffusion decoder.</p></div>
+            <button class="figure-button" type="button" data-lightbox="assets/figures/fusion-equivariance.png" aria-label="Open spherical fusion property figure"><img loading="lazy" src="assets/figures/fusion-equivariance.png" alt="Illustration of the index-preservation property of spherical fusion" /></button>
           </article>
         </div>
       </section>

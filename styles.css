@@ -84,10 +84,10 @@ sup { font-size: .67em; vertical-align: super; }
 .video-feature { align-self: start; overflow: hidden; background: #090e17; box-shadow: var(--shadow); }
 .video-feature video { width: 100%; aspect-ratio: 16/9; object-fit: cover; background: #05080e; }
 .media-topline { display: flex; justify-content: space-between; padding: 13px 17px; color: #d9e0e9; font-size: .78rem; font-weight: 600; }
-.abstract-card { padding: 25px 27px; background: linear-gradient(145deg,#fff,#f8fbff); }
-.abstract-card p:not(.card-index) { margin-bottom: 12px; color: #4d586a; font-size: .85rem; line-height: 1.52; }
+.abstract-card { padding: 23px 25px; background: linear-gradient(145deg,#fff,#f8fbff); }
+.abstract-card p:not(.card-index) { margin-bottom: 10px; color: #4d586a; font-size: .83rem; line-height: 1.48; }
 .abstract-card strong { color: var(--ink); }
-.abstract-card .positioning-note { margin: 14px 0; padding: 11px 13px; border-left: 3px solid var(--blue); border-radius: 4px 12px 12px 4px; color: #3e4b60; background: rgba(20,99,255,.055); font-size: .76rem; line-height: 1.5; }
+.abstract-card .positioning-note { margin: 13px 0 0; padding: 10px 0 0; border-top: 1px solid var(--line); color: #687488; font-size: .72rem; line-height: 1.45; }
 .card-index { margin-bottom: 12px; color: var(--blue); font-family: "Manrope",sans-serif; font-weight: 800; }
 .keyword-list { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 15px; }
 .keyword-list span { padding: 4px 8px; border: 1px solid #dce4ef; border-radius: 999px; color: #536074; background: #fff; font-size: .66rem; font-weight: 700; }

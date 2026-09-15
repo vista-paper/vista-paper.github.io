@@ -80,8 +80,6 @@ sup { font-size: .67em; vertical-align: super; }
 .section-dark .section-heading > p { color: #aeb8c8; }
 
 .overview-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; align-items: start; }
-.overview-video-column { display: grid; gap: 14px; align-content: start; }
-.overview-blurb { margin: 0; color: var(--muted); font-size: .95rem; line-height: 1.5; }
 .video-feature, .abstract-card, .figure-card, .environment-card, .sim-rollouts, .result-card, .ablation-grid, .citation-card { border: 1px solid var(--line); border-radius: var(--radius); background: #fff; }
 .video-feature { align-self: start; overflow: hidden; background: #090e17; box-shadow: var(--shadow); }
 .video-feature video { width: 100%; aspect-ratio: 16/9; object-fit: cover; background: #05080e; }
@@ -89,7 +87,6 @@ sup { font-size: .67em; vertical-align: super; }
 .abstract-card { padding: 23px 25px; background: linear-gradient(145deg,#fff,#f8fbff); }
 .abstract-card p:not(.card-index) { margin-bottom: 10px; color: #4d586a; font-size: .83rem; line-height: 1.48; }
 .abstract-card strong { color: var(--ink); }
-.abstract-card .positioning-note { margin: 13px 0 0; padding: 10px 0 0; border-top: 1px solid var(--line); color: #687488; font-size: .72rem; line-height: 1.45; }
 .card-index { margin-bottom: 12px; color: var(--blue); font-family: "Manrope",sans-serif; font-weight: 800; }
 .keyword-list { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 15px; }
 .keyword-list span { padding: 4px 8px; border: 1px solid #dce4ef; border-radius: 999px; color: #536074; background: #fff; font-size: .66rem; font-weight: 700; }

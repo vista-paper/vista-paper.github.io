@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css?v=10" />
+    <link rel="stylesheet" href="styles.css?v=11" />
     <script src="script.js" defer></script>
   </head>
   <body>
@@ -54,15 +54,14 @@
 
       <section class="section" id="overview">
         <div class="shell">
-        <div class="section-heading reveal"><p class="eyebrow">01 · Overview</p><h2>Learning contact-rich skills from fewer demonstrations.</h2></div>
+        <div class="section-heading reveal"><p class="eyebrow">01 · Overview</p><h2>Learning contact-rich skills from fewer demonstrations.</h2><p>VISTA combines vision, touch, and robot state in a geometry-aware policy that transfers learned behavior across spatial configurations. To our knowledge, VISTA is among the first to study workspace-level equivariance in an end-to-end visuotactile diffusion policy for contact-rich manipulation.</p></div>
         <div class="overview-grid">
-            <div class="overview-video-column"><p class="overview-blurb">VISTA combines vision, touch, and robot state in a geometry-aware policy that transfers learned behavior across spatial configurations.</p><article class="video-feature reveal"><div class="media-topline"><span>Three-minute presentation</span><span>03:00</span></div><video controls preload="metadata" poster="assets/posters/overview.jpg"><source src="assets/videos/overview.mp4" type="video/mp4" />Your browser does not support HTML video.</video></article></div>
+            <article class="video-feature reveal"><div class="media-topline"><span>Three-minute presentation</span><span>03:00</span></div><video controls preload="metadata" poster="assets/posters/overview.jpg"><source src="assets/videos/overview.mp4" type="video/mp4" />Your browser does not support HTML video.</video></article>
             <article class="abstract-card reveal">
               <p class="card-index">Abstract</p>
               <p>Imitation learning for contact-rich manipulation requires high-quality expert data that is expensive to obtain. This makes learning a spatially robust policy under limited demonstrations a key issue. To address this, we propose <strong>VISTA</strong>, an equivariant visuotactile diffusion policy for data-efficient contact-rich imitation learning.</p>
               <p>VISTA projects visual and tactile observations into spherical tokens, injects tactile contact cues into visual spherical directions through permutation-equivariant spherical fusion, and rotates the fused harmonic representation using the end-effector orientation. The resulting representation conditions an equivariant diffusion policy to predict spatially consistent actions. Extensive simulation and real-world experiments show substantial gains in data efficiency and spatial robustness over strong visuotactile imitation-learning baselines.</p>
               <div class="keyword-list" aria-label="Keywords"><span>Visuo-tactile manipulation</span><span>Equivariant learning</span><span>Diffusion policy</span></div>
-              <p class="positioning-note">To our knowledge, VISTA is among the first to explore workspace-level equivariance in an end-to-end visuotactile diffusion policy for contact-rich manipulation.</p>
             </article>
           </div>
           <div class="metrics reveal" aria-label="Key results">

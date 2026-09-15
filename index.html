@@ -77,7 +77,7 @@
             <button class="figure-button" type="button" data-lightbox="assets/figures/method.png" aria-label="Open VISTA method figure"><img loading="lazy" src="assets/figures/method.png" alt="Overview of the VISTA architecture from visual and tactile observations to workspace-equivariant action prediction" /><span class="zoom-hint" aria-hidden="true">Open figure ↗</span></button>
             <details class="method-explainer">
               <summary><span aria-hidden="true">i</span> Why this sequence?</summary>
-              <div class="method-explainer-panel"><strong>Where the policy property comes from.</strong> The encoders create a sensor-local spherical indexing, and fusion keeps that indexing intact. The end-effector rotation then aligns the fused representation with the workspace, where the equivariant diffusion decoder predicts actions. Workspace-level equivariance belongs to this complete sequence.</div>
+              <div class="method-explainer-panel"><strong>Where the policy property comes from.</strong> The encoders create sensor-local spherical tokens, and fusion combines visual and tactile cues while preserving the sphere's indexing. This preservation is a compatibility property; fusion itself does not establish workspace-level equivariance. That property comes from the equivariance correction, which uses the end-effector rotation to align the fused representation with the workspace, together with the equivariant diffusion decoder. Our fusion design is responsible for using the two modalities effectively, which is reflected in the higher task success rates.</div>
             </details>
           </article>
           <div class="method-steps reveal">

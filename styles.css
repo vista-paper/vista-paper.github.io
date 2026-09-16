@@ -42,8 +42,7 @@ a, button { color: inherit; }
 .hero-orb { position: absolute; border-radius: 50%; filter: blur(4px); opacity: .6; pointer-events: none; will-change: transform; }
 .hero-orb-one { width: 300px; height: 300px; top: 15%; right: -160px; background: radial-gradient(circle at 30% 30%,rgba(37,191,211,.45),rgba(20,99,255,.05)); transform: translate3d(var(--orb-x,0),var(--orb-y,0),0); }
 .hero-orb-two { width: 220px; height: 220px; left: -130px; bottom: 4%; background: radial-gradient(circle at 50% 50%,rgba(255,143,61,.25),rgba(255,143,61,0)); transform: translate3d(var(--orb-x-reverse,0),var(--orb-y-reverse,0),0); }
-.venue-banner { margin: 0 0 22px; color: var(--ink); font-family: "Manrope",sans-serif; font-size: clamp(2.05rem, 4.4vw, 3.15rem); font-weight: 800; letter-spacing: -.04em; line-height: 1.15; }
-.venue-banner strong { color: var(--blue); font-weight: 800; }
+.venue-banner { margin: 0 0 22px; color: var(--blue); font-family: "Manrope",sans-serif; font-size: clamp(2.2rem, 5vw, 3.4rem); font-weight: 800; letter-spacing: -.04em; line-height: 1.15; }
 .hero-kicker { margin: 0 0 8px; color: var(--blue); font-weight: 700; letter-spacing: .09em; text-transform: uppercase; font-size: .77rem; }
 h1, h2, h3, p { margin-top: 0; }
 h1, h2, h3 { font-family: "Manrope",sans-serif; letter-spacing: -.035em; }

@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css?v=19" />
+    <link rel="stylesheet" href="styles.css?v=20" />
     <script src="script.js" defer></script>
   </head>
   <body>
@@ -30,8 +30,8 @@
       <section class="hero" id="top">
         <div class="hero-orb hero-orb-one" aria-hidden="true"></div><div class="hero-orb hero-orb-two" aria-hidden="true"></div>
         <div class="shell hero-shell">
-          <div class="hero-copy reveal">
-            <p class="venue-badge"><span>Accepted to</span><strong>CoRL 2026</strong></p>
+          <div class="hero-copy">
+            <p class="venue-badge" aria-label="Accepted to CoRL 2026">CoRL 2026</p>
             <h1>Equivariant Visual-Tactile Diffusion Policy for <span>Contact-Rich Manipulation</span></h1>
             <div class="authors" aria-label="Authors">
               <a href="https://kenn3o3.github.io/" target="_blank" rel="noreferrer">WONG Lik Hang Kenny<sup>1</sup></a>
@@ -56,21 +56,22 @@
               </a>
             </div>
           </div>
+          <article class="hero-media">
+            <div class="media-topline"><span>Three-minute presentation</span><span>03:00</span></div>
+            <video controls preload="metadata" poster="assets/posters/overview.jpg"><source src="assets/videos/overview.mp4" type="video/mp4" />Your browser does not support HTML video.</video>
+          </article>
         </div>
       </section>
 
       <section class="section" id="overview">
         <div class="shell">
         <div class="section-heading reveal"><p class="eyebrow">01 · Overview</p><h2>Learning contact-rich skills from fewer demonstrations.</h2><p>VISTA combines vision, touch, and robot state in a geometry-aware policy that transfers learned behavior across spatial configurations. To our knowledge, VISTA is among the first to study workspace-level equivariance in an end-to-end visuotactile diffusion policy for contact-rich manipulation.</p></div>
-        <div class="overview-grid">
-            <article class="video-feature reveal"><div class="media-topline"><span>Three-minute presentation</span><span>03:00</span></div><video controls preload="metadata" poster="assets/posters/overview.jpg"><source src="assets/videos/overview.mp4" type="video/mp4" />Your browser does not support HTML video.</video></article>
-            <article class="abstract-card reveal">
+        <article class="abstract-card reveal">
               <p class="card-index">Abstract</p>
               <p>Imitation learning for contact-rich manipulation requires high-quality expert data that is expensive to obtain. This makes learning a spatially robust policy under limited demonstrations a key issue. To address this, we propose <strong>VISTA</strong>, an equivariant visuotactile diffusion policy for data-efficient contact-rich imitation learning.</p>
               <p>VISTA projects visual and tactile observations into spherical tokens, injects tactile contact cues into visual spherical directions through permutation-equivariant spherical fusion, and rotates the fused harmonic representation using the end-effector orientation. The resulting representation conditions an equivariant diffusion policy to predict spatially consistent actions. Extensive simulation and real-world experiments show substantial gains in data efficiency and spatial robustness over strong visuotactile imitation-learning baselines.</p>
               <div class="keyword-list" aria-label="Keywords"><span>Visuo-tactile manipulation</span><span>Equivariant learning</span><span>Diffusion policy</span></div>
             </article>
-          </div>
           <div class="metrics reveal" aria-label="Key results">
             <div><strong>80.9<small>%</small></strong><span>Mean simulation success</span></div><div><strong>+15.9<small> pp</small></strong><span>Over the strongest baseline</span></div><div><strong>73.3<small>%</small></strong><span>Average real-robot success</span></div><div><strong>50</strong><span>Demonstrations per task</span></div>
           </div>

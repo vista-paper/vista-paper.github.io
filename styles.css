@@ -42,9 +42,9 @@ a, button { color: inherit; }
 .hero-orb { position: absolute; border-radius: 50%; filter: blur(4px); opacity: .6; pointer-events: none; will-change: transform; }
 .hero-orb-one { width: 300px; height: 300px; top: 15%; right: -160px; background: radial-gradient(circle at 30% 30%,rgba(37,191,211,.45),rgba(20,99,255,.05)); transform: translate3d(var(--orb-x,0),var(--orb-y,0),0); }
 .hero-orb-two { width: 220px; height: 220px; left: -130px; bottom: 4%; background: radial-gradient(circle at 50% 50%,rgba(255,143,61,.25),rgba(255,143,61,0)); transform: translate3d(var(--orb-x-reverse,0),var(--orb-y-reverse,0),0); }
-.venue-pill { display: inline-flex; align-items: center; gap: 10px; padding: 10px 16px; border: 1px solid #d9e0eb; border-radius: 999px; color: #445065; background: rgba(255,255,255,.8); font-weight: 700; font-size: 1.02rem; letter-spacing: .02em; box-shadow: 0 6px 24px rgba(20,34,58,.05); }
-.venue-pill span { width: 9px; height: 9px; border-radius: 50%; background: var(--orange); box-shadow: 0 0 0 4px rgba(255,143,61,.13); }
-.hero-kicker { margin: 26px 0 8px; color: var(--blue); font-weight: 700; letter-spacing: .09em; text-transform: uppercase; font-size: .77rem; }
+.venue-banner { margin: 0 0 22px; color: var(--ink); font-family: "Manrope",sans-serif; font-size: clamp(2.05rem, 4.4vw, 3.15rem); font-weight: 800; letter-spacing: -.04em; line-height: 1.15; }
+.venue-banner strong { color: var(--blue); font-weight: 800; }
+.hero-kicker { margin: 0 0 8px; color: var(--blue); font-weight: 700; letter-spacing: .09em; text-transform: uppercase; font-size: .77rem; }
 h1, h2, h3, p { margin-top: 0; }
 h1, h2, h3 { font-family: "Manrope",sans-serif; letter-spacing: -.035em; }
 h1 { margin-bottom: 23px; font-size: clamp(2.55rem,4vw,4rem); line-height: 1.04; font-weight: 800; }
@@ -252,7 +252,7 @@ footer { padding: 48px 0; color: #97a4b6; background: #060d17; }
 }
 
 @media (max-width: 460px) {
-  .venue-pill { font-size: .92rem; }
+  .venue-banner { font-size: clamp(1.7rem, 8vw, 2.2rem); }
   .hero-actions .button { flex-basis: 100%; }
   .affiliation-logos img { height: 44px; }
   .affiliations { display: block; }
